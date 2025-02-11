@@ -97,8 +97,8 @@ const SolanaFeeTracker = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-4xl font-bold mb-8">Solana Gas Fee Tracker</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black ">
+      <h1 className="text-4xl mb-8 font-extrabold m-10  ">Solana Gas Fee Tracker</h1>
       <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
         <LineChart width={800} height={400} data={feeData}>
           <Line type="monotone" dataKey="fee" stroke="#8884d8" />
