@@ -63,20 +63,7 @@ const Navbar = () => {
           >
             WhitePaper
           </Link>
-          <Link
-            href="/services"
-            onClick={toggleMenu}
-            className="block px-4 py-2 hover:bg-indigo-600"
-          >
-            Services
-          </Link>
-          <Link
-            href="/contact"
-            onClick={toggleMenu}
-            className="block px-4 py-2 hover:bg-indigo-600"
-          >
-            Contact
-          </Link>
+          
         </div>
       )}
     </nav>
