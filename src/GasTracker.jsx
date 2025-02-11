@@ -16,29 +16,6 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts'
 const fetchFees = async () => {
 //   const connection = new Connection(clusterApiUrl('mainnet-beta'), 'confirmed');
 const connection = new Connection('https://solana-mainnet.g.alchemy.com/v2/QWDrB2hMGREbNd46_D2j9YliRY2goYd5', 'confirmed');
-// try {
-//     // Fetch the latest blockhash
-//     const { blockhash } = await connection.getLatestBlockhash('finalized');
-
-//     // Create a dummy transaction to estimate fees
-//     const transaction = new Transaction().add(
-//       SystemProgram.transfer({
-//         fromPubkey: Keypair.generate().publicKey, // Dummy sender
-//         toPubkey: Keypair.generate().publicKey,   // Dummy receiver
-//         lamports: 1, // Small amount for estimation
-//       })
-//     );
-//     transaction.recentBlockhash = blockhash;
-
-//     // Estimate the fee for this transaction
-//     const fee = await connection.getFeeForMessage(transaction.compileMessage());
-
-//     console.log('Transaction fee (lamports):', fee.value);
-//     return fee.value;
-//   } catch (error) {
-//     console.error('Error fetching fees:', error);
-//     return null;
-//   }
 
 
 
@@ -99,12 +76,12 @@ const SolanaFeeTracker = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black ">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
       <div className='flex m-5'>
       {/* <Image alt='logo' src={Logo} width={150} height={100} className=' rounded-full' /> */}
      
       </div>
-      <div className="text-8xl mb-8 font-extrabold m-10  ">⚡Solana Gas Fee Tracker⚡</div>
+      {/* <div className="text-8xl mb-8 font-extrabold m-10  ">⚡Solana Gas Fee Tracker⚡</div> */}
 <h1 className='m-5 font-extrabold'>
 
 
