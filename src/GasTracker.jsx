@@ -7,6 +7,8 @@ import {
     SystemProgram,
     Keypair,
   } from '@solana/web3.js';
+  import Image from 'next/image'
+  import Logo from "../public/logo.jpg"
 import React, { useEffect, useState } from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
@@ -98,7 +100,22 @@ const SolanaFeeTracker = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black ">
-      <h1 className="text-4xl mb-8 font-extrabold m-10  ">Solana Gas Fee Tracker</h1>
+      <div className='flex m-5'>
+      {/* <Image alt='logo' src={Logo} width={150} height={100} className=' rounded-full' /> */}
+     
+      </div>
+      <div className="text-8xl mb-8 font-extrabold m-10  ">⚡Solana Gas Fee Tracker⚡</div>
+<h1 className='m-5 font-extrabold'>
+
+
+It connects to the Solana blockchain and fetches the latest network fees required to process a transaction.
+<br/>
+<br/>
+
+
+It calculates and displays the transaction fee in lamports (the smallest unit of SOL) and converts it to SOL for better understanding.
+</h1>
+
       <div className="w-full max-w-4xl bg-white p-6 rounded-lg shadow-lg">
         <LineChart width={800} height={400} data={feeData}>
           <Line type="monotone" dataKey="fee" stroke="#8884d8" />
@@ -113,6 +130,12 @@ const SolanaFeeTracker = () => {
       </div>
     </div>
   );
+
+
+
+
+
+ 
 };
 
 export default SolanaFeeTracker;
